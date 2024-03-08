@@ -114,7 +114,7 @@ export default function Order() {
         </Form>
       </div>
       <foother className="formCard">
-        <section>
+        <section className="piecesBtn">
           <Button color="warning">-</Button>
           <span style={{ margin: '0 10px' }}>{'0'}</span>
           <Button color="warning">+</Button>

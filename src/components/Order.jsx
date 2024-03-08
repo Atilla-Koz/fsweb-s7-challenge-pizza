@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Form,
   FormGroup,
@@ -16,6 +16,7 @@ import {
 import axios from 'axios';
 import './order.css';
 import Header from './Header';
+import OrderTop from './OrderTop';
 
 const initialForm = {
   fullName: '',
@@ -41,18 +42,56 @@ const materialOptions = [
   'Mantar',
 ];
 
+const materialPrices = {
+  Pepperoni: 5,
+  Domates: 5,
+  Biber: 5,
+  Sosis: 5,
+  Mısır: 5,
+  Sucuk: 5,
+  'Kanada Jambonu': 5,
+  'Tavuk ızgara': 5,
+  Jalepeno: 5,
+  Kabak: 5,
+  Ananas: 5,
+  Zeytin: 5,
+  Mantar: 5,
+};
+
 export default function Order() {
   const [form, setForm] = useState(initialForm);
   const [formValid, setFormValid] = useState(false);
+  const [selectedMaterials, setSelectedMaterials] = useState([]);
+  const [totalPrice, setTotalPrice] = useState(85.5);
+
+  useEffect(() => {
+    const materialsPrice = selectedMaterials.reduce(
+      (total, material) => total + materialPrices[material],
+      0
+    );
+    setTotalPrice(85.5 + materialsPrice);
+  }, [selectedMaterials]);
 
   const handleChange = (event) => {
     const { name, value, type, checked } = event.target;
+    let updatedMaterials = selectedMaterials;
+
+    if (type === 'checkbox') {
+      if (checked) {
+        updatedMaterials = [...selectedMaterials, value];
+      } else {
+        updatedMaterials = selectedMaterials.filter(
+          (material) => material !== value
+        );
+      }
+    }
+
     const updatedForm = {
       ...form,
-      [name]: type === 'checkbox' ? [...form[name], value] : value,
+      [name]: type === 'checkbox' ? updatedMaterials : value,
     };
-
     setForm(updatedForm);
+    setSelectedMaterials(updatedMaterials);
     validateForm(updatedForm);
   };
 
@@ -84,6 +123,9 @@ export default function Order() {
       <header>
         <Header />
       </header>
+      <section className="dynmc">
+        <OrderTop />
+      </section>
       <div className="orderContainer">
         <Form onSubmit={handleSubmit} disabled={!formValid}>
           <FormGroup>
@@ -195,8 +237,8 @@ export default function Order() {
               <Card style={{ width: '18rem' }}>
                 <CardTitle tag="h5">Sipariş Toplamı</CardTitle>
                 <CardBody>
-                  <CardText>Seçimler{}</CardText>
-                  <CardText>Toplam{}</CardText>
+                  <CardText></CardText>
+                  <CardText>Toplam: {totalPrice.toFixed(2)} TL</CardText>
                 </CardBody>
                 <Button color="warning" type="submit" disabled={!formValid}>
                   Sipariş Ver

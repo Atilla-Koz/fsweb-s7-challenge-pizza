@@ -16,3 +16,16 @@
   gap: 2rem;
   padding-top: 1rem;
 }
+.dynmc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+.OTP {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 35%;
+  padding-right: 35%;
+}

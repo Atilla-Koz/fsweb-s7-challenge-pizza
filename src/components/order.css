@@ -4,3 +4,26 @@
   align-items: center;
   padding-top: 2rem;
 }
+.pastry {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.materials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.checkbox-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  gap: 5rem;
+}
+.formCard {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding-top: 1rem;
+}

@@ -7,6 +7,11 @@ import {
   FormText,
   Col,
   Button,
+  FormFeedback,
+  CardTitle,
+  CardBody,
+  Card,
+  CardText,
 } from 'reactstrap';
 import './order.css';
 import Header from './Header';
@@ -18,79 +23,118 @@ export default function Order() {
       </header>
       <div className="orderContainer">
         <Form>
-          <FormGroup row>
-            <Label for="exampleSelect" sm={2}>
-              Select
-            </Label>
-            <Col sm={10}>
-              <Input id="exampleSelect" name="select" type="select">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+          <FormGroup>
+            <Label for="ad">Ad:</Label>
+            <Input />
+            <FormFeedback>You will not be able to see this</FormFeedback>
+            <FormText>Example help text that remains unchanged.</FormText>
+          </FormGroup>
+          <section className="pastry">
+            <FormGroup tag="fieldset">
+              <legend>Boyut Seç</legend>
+              <FormGroup check>
+                <Label check>
+                  <Input name="size" type="radio" /> Küçük
+                </Label>
+              </FormGroup>
+              <FormGroup check>
+                <Label check>
+                  <Input name="size" type="radio" /> Orta
+                </Label>
+              </FormGroup>
+              <FormGroup check>
+                <Label check>
+                  <Input name="size" type="radio" /> Büyük
+                </Label>
+              </FormGroup>
+            </FormGroup>
+            <FormGroup>
+              <Label for="thickness">Hamur Seç</Label>
+              <Input id="thickness" name="thickness" type="select">
+                <option>Ince</option>
+                <option>Orta</option>
+                <option>Kalın</option>
               </Input>
-            </Col>
-          </FormGroup>
-
-          <FormGroup row>
-            <Label for="exampleText" sm={2}>
-              Text Area
-            </Label>
-            <Col sm={10}>
-              <Input id="exampleText" name="text" type="textarea" />
-            </Col>
-          </FormGroup>
-
-          <FormGroup row tag="fieldset">
-            <legend className="col-form-label col-sm-2">Radio Buttons</legend>
-            <Col sm={10}>
-              <FormGroup check>
-                <Input name="radio2" type="radio" />{' '}
-                <Label check>
-                  Option one is this and that—be sure to include why it‘s great
+            </FormGroup>
+          </section>
+          <section className="materials">
+            <FormGroup check>
+              <div className="checkbox-row">
+                <Label for="material1" check>
+                  <Input id="material1" type="checkbox" /> Pepperoni
                 </Label>
-              </FormGroup>
-              <FormGroup check>
-                <Input name="radio2" type="radio" />{' '}
-                <Label check>
-                  Option two can be something else and selecting it will
-                  deselect option one
+                <Label for="material2" check>
+                  <Input id="material2" type="checkbox" /> Domates
                 </Label>
-              </FormGroup>
-              <FormGroup check disabled>
-                <Input disabled name="radio2" type="radio" />{' '}
-                <Label check>Option three is disabled</Label>
-              </FormGroup>
-            </Col>
-          </FormGroup>
-          <FormGroup row>
-            <Label for="checkbox2" sm={2}>
-              Checkbox
-            </Label>
-            <Col
-              sm={{
-                size: 10,
-              }}
-            >
-              <FormGroup check>
-                <Input id="checkbox2" type="checkbox" />{' '}
-                <Label check>Check me out</Label>
-              </FormGroup>
-            </Col>
-          </FormGroup>
-          <FormGroup check row>
-            <Col
-              sm={{
-                offset: 2,
-                size: 10,
-              }}
-            >
-              <Button>Submit</Button>
-            </Col>
+                <Label for="material3" check>
+                  <Input id="material3" type="checkbox" />
+                  Biber
+                </Label>
+              </div>
+              <div className="checkbox-row">
+                <Label for="material4" check>
+                  <Input id="material4" type="checkbox" /> Sosis
+                </Label>
+                <Label for="material5" check>
+                  <Input id="material5" type="checkbox" /> Mısır
+                </Label>
+                <Label for="material6" check>
+                  <Input id="material6" type="checkbox" /> Sucuk
+                </Label>
+              </div>
+              <div className="checkbox-row">
+                <Label for="material7" check>
+                  <Input id="material7" type="checkbox" /> Kanada Jambonu
+                </Label>
+                <Label for="material8" check>
+                  <Input id="material8" type="checkbox" /> Sucuk
+                </Label>
+                <Label for="material9" check>
+                  <Input id="material9" type="checkbox" /> Ananas
+                </Label>
+              </div>
+              <div className="checkbox-row">
+                <Label for="material7" check>
+                  <Input id="material7" type="checkbox" /> Tavuk ızgara
+                </Label>
+                <Label for="material8" check>
+                  <Input id="material8" type="checkbox" /> Jalepeno
+                </Label>
+                <Label for="material9" check>
+                  <Input id="material9" type="checkbox" /> Kabak
+                </Label>
+              </div>
+            </FormGroup>
+          </section>
+
+          <FormGroup>
+            <Label for="text">Sipariş Notu:</Label>
+            <Input id="text" name="text" type="textarea" />
           </FormGroup>
         </Form>
       </div>
+      <foother className="formCard">
+        <section>
+          <Button color="warning">-</Button>
+          <span style={{ margin: '0 10px' }}>{'0'}</span>
+          <Button color="warning">+</Button>
+        </section>
+        <section>
+          <Card
+            style={{
+              width: '18rem',
+              paddingLeft: '10px',
+            }}
+          >
+            <CardTitle tag="h5">Sipariş Toplamı</CardTitle>
+            <CardBody>
+              <CardText>Seçimler{}</CardText>
+              <CardText>Toplam{}</CardText>
+            </CardBody>
+            <Button color="warning">Sipariş Ver</Button>
+          </Card>
+        </section>
+      </foother>
     </>
   );
 }

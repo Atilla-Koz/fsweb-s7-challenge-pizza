@@ -111,7 +111,7 @@ export default function Order() {
       .then((response) => {
         console.log('API Response:', response.data);
 
-        // window.location.href = '/success';
+        window.location.href = '/success';
       })
       .catch((error) => {
         console.error('API Request Error:', error);
@@ -229,9 +229,13 @@ export default function Order() {
 
           <footer className="formCard">
             <section className="piecesBtn">
-              <Button color="warning">-</Button>
+              <Button type="button" color="warning">
+                -
+              </Button>
               <span style={{ margin: '0 10px' }}>{'0'}</span>
-              <Button color="warning">+</Button>
+              <Button type="button" color="warning">
+                +
+              </Button>
             </section>
             <section>
               <Card style={{ width: '18rem' }}>

@@ -127,7 +127,7 @@ export default function Order() {
       .then((response) => {
         console.log('API Response:', response.data);
 
-        window.location.href = '/success';
+        // window.location.href = '/success';
       })
       .catch((error) => {
         console.error('API Request Error:', error);
@@ -198,7 +198,7 @@ export default function Order() {
             </FormGroup>
 
             <FormGroup>
-              <legend for="thickness">
+              <legend htmlFor="thickness">
                 Hamur Seç<FormText color="danger">*</FormText>
               </legend>
               <Input

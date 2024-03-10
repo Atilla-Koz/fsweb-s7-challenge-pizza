@@ -57,10 +57,6 @@ const materialPrices = {
   Mantar: 5,
   'Kanada Jambonu': 5,
 };
-const sizePrices = {
-  Orta: 10,
-  Büyük: 20,
-};
 
 export default function Order() {
   const [form, setForm] = useState(initialForm);
@@ -128,7 +124,7 @@ export default function Order() {
       .then((response) => {
         console.log('API Response:', response.data);
 
-        // window.location.href = '/success';
+        window.location.href = '/success';
       })
       .catch((error) => {
         console.error('API Request Error:', error);

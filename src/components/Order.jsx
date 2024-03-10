@@ -151,19 +151,6 @@ export default function Order() {
       </section>
       <div className="orderContainer">
         <Form onSubmit={handleSubmit} disabled={!formValid}>
-          <FormGroup>
-            <Label for="fullName">Ad Soyad:</Label>
-            <Input
-              id="fullName"
-              name="fullName"
-              placeholder="ad ve soyadı"
-              type="text"
-              onChange={handleChange}
-              invalid={form.fullName.length > 0 && form.fullName.length < 3}
-            />
-            <FormFeedback>En az 3 karakter girilmelidir.</FormFeedback>
-          </FormGroup>
-
           <section className="pastry">
             <FormGroup tag="fieldset">
               <legend>
@@ -252,6 +239,18 @@ export default function Order() {
               </div>
             </FormGroup>
           </section>
+          <FormGroup>
+            <Label for="fullName">Ad Soyad:</Label>
+            <Input
+              id="fullName"
+              name="fullName"
+              placeholder="ad ve soyadı"
+              type="text"
+              onChange={handleChange}
+              invalid={form.fullName.length > 0 && form.fullName.length < 3}
+            />
+            <FormFeedback>En az 3 karakter girilmelidir.</FormFeedback>
+          </FormGroup>
 
           <FormGroup>
             <Label for="text">Sipariş Notu:</Label>

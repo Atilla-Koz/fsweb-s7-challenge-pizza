@@ -56,6 +56,10 @@ const materialPrices = {
   Zeytin: 5,
   Mantar: 5,
 };
+const sizePrices = {
+  Orta: 10,
+  Büyük: 20,
+};
 
 export default function Order() {
   const [form, setForm] = useState(initialForm);
@@ -64,20 +68,13 @@ export default function Order() {
   const [totalPrice, setTotalPrice] = useState(85.5);
 
   useEffect(() => {
-    let sizePrice = 0;
-
-    if (form.size === 'Büyük') {
-      sizePrice = 20;
-    } else if (form.size === 'Orta') {
-      sizePrice = 10;
-    }
     const materialsPrice = selectedMaterials.reduce(
-      (total, material) => total + materialPrices['material'],
+      (total, material) => total + materialPrices[material],
       0
     );
 
-    setTotalPrice(85.5 + materialsPrice + sizePrice);
-  }, [form.size, selectedMaterials]);
+    setTotalPrice(85.5 + materialsPrice);
+  }, [selectedMaterials]);
 
   const handleChange = (event) => {
     const { name, value, type, checked } = event.target;

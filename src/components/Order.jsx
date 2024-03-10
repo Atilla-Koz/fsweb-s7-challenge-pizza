@@ -176,6 +176,8 @@ export default function Order() {
                     name="size"
                     type="radio"
                     onChange={handleChange}
+                    value="kucuk"
+                    checked={form.size == 'kucuk'}
                   />{' '}
                   Küçük
                 </Label>
@@ -187,6 +189,8 @@ export default function Order() {
                     name="size"
                     type="radio"
                     onChange={handleChange}
+                    value="orta"
+                    checked={form.size == 'orta'}
                   />{' '}
                   Orta
                 </Label>
@@ -198,6 +202,8 @@ export default function Order() {
                     name="size"
                     type="radio"
                     onChange={handleChange}
+                    value="buyuk"
+                    checked={form.size == 'buyuk'}
                   />{' '}
                   Büyük
                 </Label>

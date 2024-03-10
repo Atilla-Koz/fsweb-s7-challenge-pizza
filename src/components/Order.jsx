@@ -32,13 +32,14 @@ const materialOptions = [
   'Sosis',
   'Mısır',
   'Sucuk',
-  'Kanada Jambonu',
-  'Tavuk ızgara',
+
+  'Tavuk',
   'Jalepeno',
   'Kabak',
   'Ananas',
   'Zeytin',
   'Mantar',
+  'Kanada Jambonu',
 ];
 
 const materialPrices = {
@@ -48,13 +49,13 @@ const materialPrices = {
   Sosis: 5,
   Mısır: 5,
   Sucuk: 5,
-  'Kanada Jambonu': 5,
-  'Tavuk ızgara': 5,
+  Tavuk: 5,
   Jalepeno: 5,
   Kabak: 5,
   Ananas: 5,
   Zeytin: 5,
   Mantar: 5,
+  'Kanada Jambonu': 5,
 };
 const sizePrices = {
   Orta: 10,
@@ -221,20 +222,22 @@ export default function Order() {
               <FormText color="danger">
                 En az 4, en fazla 10 malzeme seçimi yapmalısınız.
               </FormText>
-              {materialOptions.map((material, index) => (
-                <div className="checkbox-row" key={index}>
-                  <Label for={`material${index + 1}`} check>
-                    <Input
-                      id={`material${index + 1}`}
-                      type="checkbox"
-                      name="material"
-                      value={material}
-                      onChange={handleChange}
-                    />{' '}
-                    {material}
-                  </Label>
-                </div>
-              ))}
+              <div className="checkbox-container">
+                {materialOptions.map((material, index) => (
+                  <div className="checkbox-row" key={index}>
+                    <Label for={`material${index + 1}`} check>
+                      <Input
+                        id={`material${index + 1}`}
+                        type="checkbox"
+                        name="material"
+                        value={material}
+                        onChange={handleChange}
+                      />{' '}
+                      {material}
+                    </Label>
+                  </div>
+                ))}
+              </div>
             </FormGroup>
           </section>
 

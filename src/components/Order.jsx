@@ -5,7 +5,6 @@ import {
   Label,
   Input,
   FormText,
-  Col,
   Button,
   FormFeedback,
   CardTitle,
@@ -65,12 +64,20 @@ export default function Order() {
   const [totalPrice, setTotalPrice] = useState(85.5);
 
   useEffect(() => {
+    let sizePrice = 0;
+
+    if (form.size === 'Büyük') {
+      sizePrice = 20;
+    } else if (form.size === 'Orta') {
+      sizePrice = 10;
+    }
     const materialsPrice = selectedMaterials.reduce(
-      (total, material) => total + materialPrices[material],
+      (total, material) => total + materialPrices['material'],
       0
     );
-    setTotalPrice(85.5 + materialsPrice);
-  }, [selectedMaterials]);
+
+    setTotalPrice(85.5 + materialsPrice + sizePrice);
+  }, [form.size, selectedMaterials]);
 
   const handleChange = (event) => {
     const { name, value, type, checked } = event.target;
@@ -84,12 +91,20 @@ export default function Order() {
           (material) => material !== value
         );
       }
+    } else if (type === 'radio' && checked) {
+      setForm({
+        ...form,
+        [name]: value,
+      });
+      validateForm({ ...form, [name]: value });
+      return;
     }
 
     const updatedForm = {
       ...form,
       [name]: type === 'checkbox' ? updatedMaterials : value,
     };
+
     setForm(updatedForm);
     setSelectedMaterials(updatedMaterials);
     validateForm(updatedForm);
@@ -99,8 +114,12 @@ export default function Order() {
     const isNameValid = formData.fullName.length >= 3;
     const isMaterialValid =
       formData.material.length >= 4 && formData.material.length <= 10;
+    const isSizeSelected = formData.size !== '';
+    const isThicknessSelected = formData.thickness !== '';
 
-    setFormValid(isNameValid && isMaterialValid);
+    setFormValid(
+      isNameValid && isMaterialValid && isSizeSelected && isThicknessSelected
+    );
   };
 
   const handleSubmit = (event) => {
@@ -143,11 +162,13 @@ export default function Order() {
 
           <section className="pastry">
             <FormGroup tag="fieldset">
-              <legend>Boyut Seç</legend>
+              <legend>
+                Boyut Seç<FormText color="danger">*</FormText>
+              </legend>
               <FormGroup check>
                 <Label check>
                   <Input
-                    id="size"
+                    id="size-small"
                     name="size"
                     type="radio"
                     onChange={handleChange}
@@ -158,7 +179,7 @@ export default function Order() {
               <FormGroup check>
                 <Label check>
                   <Input
-                    id="size"
+                    id="size-medium"
                     name="size"
                     type="radio"
                     onChange={handleChange}
@@ -169,7 +190,7 @@ export default function Order() {
               <FormGroup check>
                 <Label check>
                   <Input
-                    id="size"
+                    id="size-large"
                     name="size"
                     type="radio"
                     onChange={handleChange}
@@ -180,13 +201,16 @@ export default function Order() {
             </FormGroup>
 
             <FormGroup>
-              <Label for="thickness">Hamur Seç</Label>
+              <legend for="thickness">
+                Hamur Seç<FormText color="danger">*</FormText>
+              </legend>
               <Input
                 id="thickness"
                 name="thickness"
                 type="select"
                 onChange={handleChange}
               >
+                <option></option>
                 <option>Ince</option>
                 <option>Orta</option>
                 <option>Kalın</option>
@@ -197,6 +221,9 @@ export default function Order() {
           <section className="materials">
             <FormGroup check>
               <legend>Ek Malzemeler</legend>
+              <FormText color="danger">
+                En az 4, en fazla 10 malzeme seçimi yapmalısınız.
+              </FormText>
               {materialOptions.map((material, index) => (
                 <div className="checkbox-row" key={index}>
                   <Label for={`material${index + 1}`} check>
@@ -211,9 +238,6 @@ export default function Order() {
                   </Label>
                 </div>
               ))}
-              <FormText color="danger">
-                En az 4, en fazla 10 malzeme seçimi yapmalısınız.
-              </FormText>
             </FormGroup>
           </section>
 

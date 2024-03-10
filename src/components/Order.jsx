@@ -134,6 +134,16 @@ export default function Order() {
         console.error('API Request Error:', error);
       });
   };
+  const [xTimes, setXTimes] = useState(1);
+  const handlePricePlsus = (event) => {
+    setXTimes(xTimes + 1);
+  };
+  const handlePriceMinus = (event) => {
+    setXTimes(xTimes - 1);
+    if (xTimes <= 1) {
+      setXTimes(1);
+    }
+  };
 
   return (
     <>
@@ -253,11 +263,11 @@ export default function Order() {
 
           <footer className="formCard">
             <section className="piecesBtn">
-              <Button type="button" color="warning">
+              <Button type="button" color="warning" onClick={handlePriceMinus}>
                 -
               </Button>
-              <span style={{ margin: '0 10px' }}>{'0'}</span>
-              <Button type="button" color="warning">
+              <span style={{ margin: '0 10px' }}>{xTimes}</span>
+              <Button type="button" color="warning" onClick={handlePricePlsus}>
                 +
               </Button>
             </section>
@@ -265,8 +275,10 @@ export default function Order() {
               <Card style={{ width: '18rem' }}>
                 <CardTitle tag="h5">Sipariş Toplamı</CardTitle>
                 <CardBody>
-                  <CardText></CardText>
-                  <CardText>Toplam: {totalPrice.toFixed(2)} TL</CardText>
+                  <CardText>Seçimler: {totalPrice - 85.5} TL</CardText>
+                  <CardText>
+                    Toplam: {totalPrice} TL X{xTimes}
+                  </CardText>
                 </CardBody>
                 <Button color="warning" type="submit" disabled={!formValid}>
                   Sipariş Ver

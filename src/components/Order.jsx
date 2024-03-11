@@ -135,7 +135,7 @@ export default function Order() {
       .then((response) => {
         console.log('API Response:', response.data);
 
-        history.push('/success');
+        history.push('/success', { responseData: response.data });
       })
       .catch((error) => {
         console.error('API Request Error:', error);

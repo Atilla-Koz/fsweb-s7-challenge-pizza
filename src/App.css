@@ -33,3 +33,10 @@
   color: white;
   font-size: 3rem;
 }
+.sucText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 1rem;
+  color: white;
+}

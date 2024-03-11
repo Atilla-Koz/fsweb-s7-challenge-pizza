@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Button, Card, CardBody, CardText, CardTitle } from 'reactstrap';
+import { Card, CardBody, CardText, CardTitle } from 'reactstrap';
 import logo from './logo.svg';
 import { useLocation } from 'react-router-dom';
 export default function Success() {
@@ -13,8 +13,8 @@ export default function Success() {
       <section>
         <img className="logoSuc " src={logo} alt="" />
       </section>
-
-      <p className="mainP">SİPARIŞİNİZ ALINDI!</p>
+      <p className="satisfy-regular">lezzetin yolda</p>
+      <p className="barlow-thin">SİPARIŞİNİZ ALINDI</p>
       <section className="sucText">
         <hr></hr>
         <legend>Position Absolute Acı Pizza</legend>

@@ -9,6 +9,10 @@ import icon4 from '../mile2-aseets/icons/4.svg';
 import icon5 from '../mile2-aseets/icons/5.svg';
 import icon6 from '../mile2-aseets/icons/6.svg';
 
+import p1 from '../mile2-aseets/pictures/food-1.png';
+import p2 from '../mile2-aseets/pictures/food-2.png';
+import p3 from '../mile2-aseets/pictures/food-3.png';
+
 const customButtonStyle = {
   marginTop: '1rem',
   display: 'inline-block',
@@ -42,26 +46,44 @@ export default function AdvMain() {
           <img src={icon5} alt="Your Icon" />
           <img src={icon6} alt="Your Icon" />
         </section>
-        <section className="cards">
-          <div className="leftCard">
+      </header>
+      <section className="cards">
+        <div className="leftCard">
+          <legend>deneme</legend>
+          <p>denem</p>
+          <button>deneme</button>
+        </div>
+        <div className="rightCard">
+          <div className="rightTop">
             <legend>deneme</legend>
             <p>denem</p>
             <button>deneme</button>
+          </div>{' '}
+          <div className="rightBot">
+            <legend>deneme</legend>
+            <p>deneme</p>
+            <button>deneme</button>
           </div>
-          <div className="rightCard">
-            <div className="rightTop">
-              <legend>deneme</legend>
-              <p>denem</p>
-              <button>deneme</button>
-            </div>{' '}
-            <div className="rightBot">
-              <legend>deneme</legend>
-              <p>deneme</p>
-              <button>deneme</button>
-            </div>
-          </div>
-        </section>
-      </header>
+        </div>
+      </section>
+      <section className="cards2">
+        <p>deneme</p>
+        <legend>deneme</legend>
+        <div className="bodyBot">
+          <img src={icon1} alt="Your Icon" />
+          <img src={icon2} alt="Your Icon" />
+          <img src={icon3} alt="Your Icon" />
+          <img src={icon4} alt="Your Icon" />
+          <img src={icon5} alt="Your Icon" />
+          <img src={icon6} alt="Your Icon" />
+        </div>
+        <div className="">
+          <img src={p1} alt="" />
+          <img src={p2} alt="" />
+          <img src={p3} alt="" />
+        </div>
+      </section>
+      <footer></footer>
     </div>
   );
 }

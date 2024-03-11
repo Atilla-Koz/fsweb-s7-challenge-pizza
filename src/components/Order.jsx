@@ -193,6 +193,7 @@ export default function Order() {
                     checked={form.size == 'orta'}
                   />{' '}
                   Orta
+                  <span style={{ color: 'rgba(255, 0, 0, 0.5)' }}>(+10 ₺)</span>
                 </Label>
               </FormGroup>
               <FormGroup check>
@@ -206,6 +207,7 @@ export default function Order() {
                     checked={form.size == 'buyuk'}
                   />{' '}
                   Büyük
+                  <span style={{ color: 'rgba(255, 0, 0, 0.5)' }}>(+20 ₺)</span>
                 </Label>
               </FormGroup>
             </FormGroup>
@@ -233,7 +235,7 @@ export default function Order() {
             <FormGroup check>
               <legend>Ek Malzemeler</legend>
               <FormText color="danger">
-                En az 4, en fazla 10 malzeme seçimi yapmalısınız.
+                En az 4, en fazla 10 malzeme seçimi yapmalısınız.(+5 ₺)
               </FormText>
               <div className="checkbox-container">
                 {materialOptions.map((material, index) => (
@@ -294,9 +296,9 @@ export default function Order() {
               <Card style={{ width: '18rem' }}>
                 <CardTitle tag="h5">Sipariş Toplamı</CardTitle>
                 <CardBody>
-                  <CardText>Seçimler: {totalPrice - 85.5} TL</CardText>
+                  <CardText>Seçimler: {totalPrice - 85.5} ₺</CardText>
                   <CardText>
-                    Toplam: {totalPrice} TL X{xTimes}
+                    Toplam: {totalPrice} ₺ X{xTimes}
                   </CardText>
                 </CardBody>
                 <Button color="warning" type="submit" disabled={!formValid}>

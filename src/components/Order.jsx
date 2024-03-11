@@ -298,7 +298,9 @@ export default function Order() {
                 <CardBody>
                   <CardText>Seçimler: {totalPrice - 85.5} ₺</CardText>
                   <CardText>
-                    Toplam: {totalPrice} ₺ X{xTimes}
+                    <span style={{ color: '#CE2829' }}>
+                      Toplam: {totalPrice} ₺ X{xTimes}
+                    </span>
                   </CardText>
                 </CardBody>
                 <Button color="warning" type="submit" disabled={!formValid}>

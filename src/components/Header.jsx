@@ -8,9 +8,7 @@ export default function Header() {
       <img className="logo" src={logo} alt="logo" />
       <section className="headerLink">
         <NavLink href="/">Ana Sayfa</NavLink>
-        <NavLink href="" disabled>
-          Seçenekler
-        </NavLink>
+        <NavLink disabled>Seçenekler</NavLink>
         <NavLink href="/order">Sipariş Oluştur</NavLink>
       </section>
     </div>

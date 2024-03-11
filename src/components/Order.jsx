@@ -119,9 +119,14 @@ export default function Order() {
   const history = useHistory();
   const handleSubmit = (event) => {
     event.preventDefault();
+    const formDataWithTotalPrice = {
+      ...form,
+      totalPrice: totalPrice,
+      xTimes: xTimes,
+    };
 
     axios
-      .post('https://reqres.in/api/pizza', form)
+      .post('https://reqres.in/api/pizza', formDataWithTotalPrice)
       .then((response) => {
         console.log('API Response:', response.data);
 
@@ -268,6 +273,7 @@ export default function Order() {
               onChange={handleChange}
             />
           </FormGroup>
+          <hr></hr>
 
           <footer className="formCard">
             <section className="piecesBtn">

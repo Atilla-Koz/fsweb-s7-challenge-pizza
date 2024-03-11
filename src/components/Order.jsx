@@ -262,6 +262,7 @@ export default function Order() {
             <Label for="text">Sipariş Notu:</Label>
             <Input
               id="text"
+              data-cy="textarea"
               name="text"
               type="textarea"
               onChange={handleChange}

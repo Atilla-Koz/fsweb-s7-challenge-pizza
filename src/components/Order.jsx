@@ -58,6 +58,11 @@ const materialPrices = {
   Mantar: 5,
   'Kanada Jambonu': 5,
 };
+const sizePrices = {
+  kucuk: 0,
+  orta: 10,
+  buyuk: 20,
+};
 
 export default function Order() {
   const [form, setForm] = useState(initialForm);
@@ -70,9 +75,9 @@ export default function Order() {
       (total, material) => total + materialPrices[material],
       0
     );
-
-    setTotalPrice(85.5 + materialsPrice);
-  }, [selectedMaterials]);
+    const sizePrice = sizePrices[form.size] || 0;
+    setTotalPrice(85.5 + materialsPrice + sizePrice);
+  }, [selectedMaterials, form.size]);
 
   const handleChange = (event) => {
     const { name, value, type, checked } = event.target;

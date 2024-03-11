@@ -11,7 +11,7 @@ export default function Success() {
   return (
     <div className="suc">
       <section>
-        <img className="logoSuc " src={logo} alt="" />
+        <img className="logoSuc " src={logo} alt="teknolojik yemekker logo" />
       </section>
       <p className="satisfy-regular">lezzetin yolda</p>
       <p className="barlow-thin">SİPARIŞİNİZ ALINDI</p>

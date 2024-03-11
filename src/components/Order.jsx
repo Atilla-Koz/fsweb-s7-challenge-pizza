@@ -16,6 +16,7 @@ import axios from 'axios';
 import './order.css';
 import Header from './Header';
 import OrderTop from './OrderTop';
+import { useHistory } from 'react-router-dom';
 
 const initialForm = {
   fullName: '',
@@ -115,7 +116,7 @@ export default function Order() {
       isNameValid && isMaterialValid && isSizeSelected && isThicknessSelected
     );
   };
-
+  const history = useHistory();
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -124,7 +125,7 @@ export default function Order() {
       .then((response) => {
         console.log('API Response:', response.data);
 
-        window.location.href = '/success';
+        history.push('/success');
       })
       .catch((error) => {
         console.error('API Request Error:', error);

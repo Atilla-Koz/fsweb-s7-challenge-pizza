@@ -9,7 +9,7 @@ describe('Sipariş Formu', () => {
 });
 describe('Sipariş Formu', () => {
   it('birden fazla malzeme seçilmelidir', () => {
-    cy.visit('http://localhost:5173/order'); // Doğru URL ile değiştirin
+    cy.visit('http://localhost:5173/order');
 
     cy.get('[data-cy="material-checkbox-Pepperoni"]').check();
 
@@ -23,7 +23,7 @@ describe('Sipariş Formu', () => {
 
 describe('Sipariş Formu', () => {
   it('formu göndermelidir', () => {
-    cy.visit('http://localhost:5173/order'); // Doğru URL ile değiştirin
+    cy.visit('http://localhost:5173/order');
 
     cy.get('[data-cy="fullName"]').type('Atilla Koz');
     cy.get('[data-cy="size-small"]').check();

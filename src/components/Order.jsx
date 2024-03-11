@@ -131,6 +131,7 @@ export default function Order() {
         console.error('API Request Error:', error);
       });
   };
+
   const [xTimes, setXTimes] = useState(1);
   const handlePricePlsus = (event) => {
     setXTimes(xTimes + 1);
@@ -161,6 +162,7 @@ export default function Order() {
                 <Label check>
                   <Input
                     id="size-small"
+                    data-cy="size-small"
                     name="size"
                     type="radio"
                     onChange={handleChange}
@@ -204,6 +206,7 @@ export default function Order() {
               </legend>
               <Input
                 id="thickness"
+                data-cy="thickness"
                 name="thickness"
                 type="select"
                 onChange={handleChange}
@@ -228,6 +231,7 @@ export default function Order() {
                     <Label for={`material${index + 1}`} check>
                       <Input
                         id={`material${index + 1}`}
+                        data-cy={`material-checkbox-${material}`}
                         type="checkbox"
                         name="material"
                         value={material}
@@ -245,6 +249,7 @@ export default function Order() {
             <Input
               id="fullName"
               name="fullName"
+              data-cy="fullName"
               placeholder="ad ve soyadı"
               type="text"
               onChange={handleChange}

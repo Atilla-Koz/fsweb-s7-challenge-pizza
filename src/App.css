@@ -5,6 +5,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-size: cover;
+  background-position: center;
 }
 
 .logo {
@@ -20,6 +22,57 @@
 }
 
 /* Success css */
+
+.AdvContainer {
+  background-color: #faf7f2;
+  height: 100vh;
+}
+.AdvMain {
+  background-image: url('../Assets/mile1-assets/home-banner.png');
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+.headBot {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10%;
+  background-color: white;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 7%;
+  color: white;
+  gap: 1rem;
+}
+.leftCard {
+  background-image: url('./mile2-aseets/cta/kart-1.png');
+  background-size: cover;
+  background-position: center;
+  width: 20%;
+}
+.rightCard {
+  background-size: cover;
+  background-position: center;
+  width: 20%;
+}
+.rightTop {
+  background-image: url('./mile2-aseets/cta/kart-2.png');
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 1rem;
+}
+.rightBot {
+  background-image: url('./mile2-aseets/cta/kart-3.png');
+  background-size: cover;
+  background-position: center;
+}
 .suc {
   height: 100vh;
   background-color: #ce2829;

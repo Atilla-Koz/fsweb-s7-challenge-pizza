@@ -35,6 +35,13 @@ const customButtonStyle = {
   textDecoration: 'none',
   fontSize: 'large',
 };
+const customButtonStyle2 = {
+  borderRadius: '20px',
+  backgroundColor: 'white',
+  color: '#CE2829',
+  textDecoration: 'none',
+  fontSize: 'small',
+};
 
 export default function AdvMain() {
   return (
@@ -79,20 +86,22 @@ export default function AdvMain() {
       </header>
       <section className="cards">
         <div className="leftCard">
-          <legend>deneme</legend>
-          <p>denem</p>
-          <button>deneme</button>
+          <h3>Özel </h3>
+          <h3> lezzetus</h3>
+          <p>Position:Absolute Acı Burger</p>
+          <Button style={customButtonStyle2}> SİPARİŞ VER</Button>
         </div>
         <div className="rightCard">
           <div className="rightTop">
-            <legend>deneme</legend>
-            <p>denem</p>
-            <button>deneme</button>
+            <p>Hackathlon</p>
+            <p>Burger Menü</p>
+
+            <Button style={customButtonStyle2}> SİPARİŞ VER</Button>
           </div>{' '}
           <div className="rightBot">
-            <legend>deneme</legend>
-            <p>deneme</p>
-            <button>deneme</button>
+            <p>Çoooook hızlı </p>
+            <p>npm gibi kurye</p>
+            <Button style={customButtonStyle2}> SİPARİŞ VER</Button>
           </div>
         </div>
       </section>

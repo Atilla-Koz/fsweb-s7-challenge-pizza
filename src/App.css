@@ -76,6 +76,7 @@
   background-size: cover;
   background-position: center;
   border-radius: 10px;
+  color: black;
 }
 /* body 2 */
 .cards2 {
@@ -218,7 +219,9 @@ footer {
   img {
     max-width: 40%;
   }
-
+  .Cards {
+    width: 50%;
+  }
   .products {
     display: flex;
     flex-wrap: wrap;

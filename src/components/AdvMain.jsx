@@ -190,7 +190,9 @@ export default function AdvMain() {
             <img src={IPic5} alt="" />
           </span>
         </div>
-        <div></div>
+        <div className="F4">
+          <p>deneme</p>
+        </div>
       </footer>
     </div>
   );

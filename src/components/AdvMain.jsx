@@ -9,6 +9,18 @@ import icon4 from '../mile2-aseets/icons/4.svg';
 import icon5 from '../mile2-aseets/icons/5.svg';
 import icon6 from '../mile2-aseets/icons/6.svg';
 
+import FIcon1 from '../mile2-aseets/footer/icons/icon-1.png';
+import FIcon2 from '../mile2-aseets/footer/icons/icon-2.png';
+import FIcon3 from '../mile2-aseets/footer/icons/icon-3.png';
+import FLogo from '../mile2-aseets/footer/logo-footer.svg';
+
+import IPic0 from '../mile2-aseets/footer/insta/li-0.png';
+import IPic1 from '../mile2-aseets/footer/insta/li-1.png';
+import IPic2 from '../mile2-aseets/footer/insta/li-2.png';
+import IPic3 from '../mile2-aseets/footer/insta/li-3.png';
+import IPic4 from '../mile2-aseets/footer/insta/li-4.png';
+import IPic5 from '../mile2-aseets/footer/insta/li-5.png';
+
 import p1 from '../mile2-aseets/pictures/food-1.png';
 import p2 from '../mile2-aseets/pictures/food-2.png';
 import p3 from '../mile2-aseets/pictures/food-3.png';
@@ -141,9 +153,43 @@ export default function AdvMain() {
         </div>
       </section>
       <footer>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div className="F1">
+          <img className="logoF" src={FLogo} alt="" />
+          <span>
+            <img src={FIcon1} alt="" />
+            <p>deneme</p>
+          </span>
+          <span>
+            <img src={FIcon2} alt="" />
+            <p>deneme</p>
+          </span>
+          <span>
+            <img src={FIcon3} alt="" />
+            <p>deneme</p>
+          </span>
+        </div>
+        <div className="F2">
+          <h4>Deneme</h4>
+          <p>deneme</p>
+          <p>deneme</p>
+          <p>deneme</p>
+          <p>deneme</p>
+          <p>deneme</p>
+          <p>deneme</p>
+        </div>
+        <div className="F3">
+          <h4>instagram</h4>
+          <span>
+            <img src={IPic0} alt="" />
+            <img src={IPic1} alt="" />
+            <img src={IPic2} alt="" />
+          </span>
+          <span>
+            <img src={IPic3} alt="" />
+            <img src={IPic4} alt="" />
+            <img src={IPic5} alt="" />
+          </span>
+        </div>
         <div></div>
       </footer>
     </div>

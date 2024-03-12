@@ -112,6 +112,43 @@
   gap: 1rem;
 }
 
+/* Foother */
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #292929;
+}
+.logoF {
+  width: 10rem;
+}
+.F1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+}
+.F1 span {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.F2 {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.F3 {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.F3 span {
+  display: flex;
+
+  margin-top: 1rem;
+}
+
 .suc {
   height: 100vh;
   background-color: #ce2829;

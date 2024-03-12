@@ -165,7 +165,7 @@ export default function AdvMain() {
           </span>
         </div>
       </section>
-      <footer>
+      <footer className="AdvFooter">
         <div className="F1">
           <img className="logoF" src={FLogo} alt="" />
           <span>

@@ -124,7 +124,7 @@
 }
 
 /* Foother */
-footer {
+.AdvFooter {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -223,6 +223,10 @@ footer {
 @media (max-width: 1100px) {
   img {
     max-width: 40%;
+  }
+  .headBot {
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .cards {

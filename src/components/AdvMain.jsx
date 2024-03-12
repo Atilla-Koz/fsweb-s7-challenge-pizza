@@ -106,8 +106,8 @@ export default function AdvMain() {
         </div>
       </section>
       <section className="cards2">
-        <p>deneme</p>
-        <h3>deneme</h3>
+        <p>en çok paketlenen menüler</p>
+        <h3>Acıktıran Kodlara Doyuran Lezzetler</h3>
         <div className="bodyBot">
           <span>
             <img src={icon1} alt="" />
@@ -137,26 +137,29 @@ export default function AdvMain() {
         <div className="products">
           <span className="productCard">
             <img src={p1} alt="" />
+            <h4>Terminal Pizza</h4>
             <div className="productDis">
-              <h4>deneme</h4>
-              <p>deneme</p>
-              <p>deneme</p>
+              <p>4.9</p>
+              <p>(200)</p>
+              <p>60₺</p>
             </div>
           </span>
           <span className="productCard">
             <img src={p2} alt="" />
+            <h4>Position Absolute Acı Pizza</h4>
             <div className="productDis">
-              <h4>deneme</h4>
-              <p>deneme</p>
-              <p>deneme</p>
+              <p>4.9</p>
+              <p>(928)</p>
+              <p>85₺</p>
             </div>
           </span>
           <span className="productCard">
             <img src={p3} alt="" />
+            <h4>useEffect Tavuklu Burger</h4>
             <div className="productDis">
-              <h4>deneme</h4>
-              <p>deneme</p>
-              <p>deneme</p>
+              <p>4.9</p>
+              <p>(462)</p>
+              <p>75₺</p>
             </div>
           </span>
         </div>
@@ -166,25 +169,25 @@ export default function AdvMain() {
           <img className="logoF" src={FLogo} alt="" />
           <span>
             <img src={FIcon1} alt="" />
-            <p>deneme</p>
+            <p>341 Londonderry Road, Istanbul Türkiye</p>
           </span>
           <span>
             <img src={FIcon2} alt="" />
-            <p>deneme</p>
+            <p>aciktim@teknolojikyemekler.com</p>
           </span>
           <span>
             <img src={FIcon3} alt="" />
-            <p>deneme</p>
+            <p>+90 216 123 45 67</p>
           </span>
         </div>
         <div className="F2">
-          <h4>Deneme</h4>
-          <p>deneme</p>
-          <p>deneme</p>
-          <p>deneme</p>
-          <p>deneme</p>
-          <p>deneme</p>
-          <p>deneme</p>
+          <h4>Sıccacık Menuler</h4>
+          <p>Terminal Pizza</p>
+          <p>5 Kişilik Hackathlon Pizza</p>
+          <p>useEffect Tavuklu Pizza</p>
+          <p>Beyaz Console Frosty</p>
+          <p>Testler Geçti Mutlu Burger</p>
+          <p>Position Absolute Acı Burger</p>
         </div>
         <div className="F3">
           <h4>instagram</h4>
@@ -201,7 +204,7 @@ export default function AdvMain() {
         </div>
       </footer>
       <div className="F4">
-        <p>deneme</p>
+        <p>@ 2023 Teknolojik Yemekler.</p>
       </div>
     </div>
   );

@@ -241,6 +241,7 @@
   .headBot {
     display: flex;
     flex-wrap: wrap;
+    gap: 1rem;
   }
 
   .leftCard {
@@ -261,15 +262,15 @@
   .F1 {
     padding-left: 0;
   }
-  .F3 h4 {
+  .bodyBot {
+    gap: 1rem;
   }
   .F3 span {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
   }
-  .F3 img {
-  }
+
   .F4 {
     width: 100%;
   }

@@ -224,8 +224,14 @@ footer {
   img {
     max-width: 40%;
   }
-  .Cards {
-    width: 50%;
+
+  .cards {
+  }
+  .leftCard {
+    width: 40%;
+  }
+  .rightCard {
+    width: 40%;
   }
   .products {
     display: flex;

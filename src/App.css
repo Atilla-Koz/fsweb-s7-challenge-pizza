@@ -212,6 +212,20 @@
   color: #fdc913;
   font-size: 2rem;
 }
+.satisfy-regular {
+  font-family: 'Satisfy', cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #fdc913;
+  font-size: 2rem;
+}
+.satisfy-regular2 {
+  font-family: 'Satisfy', cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #ce2829;
+  font-size: 2rem;
+}
 .barlow-thin {
   font-family: 'Barlow', sans-serif;
   font-weight: 100;
@@ -229,8 +243,6 @@
     flex-wrap: wrap;
   }
 
-  .cards {
-  }
   .leftCard {
     width: 40%;
   }
@@ -242,7 +254,7 @@
     flex-wrap: wrap;
     justify-content: center;
   }
-  footer {
+  .AdvFooter {
     width: 100%;
     font-size: 10px;
   }

@@ -107,7 +107,7 @@ export default function AdvMain() {
         </div>
       </section>
       <section className="cards2">
-        <p>en çok paketlenen menüler</p>
+        <p className="satisfy-regular2">en çok paketlenen menüler</p>
         <h3>Acıktıran Kodlara Doyuran Lezzetler</h3>
         <div className="bodyBot">
           <span>

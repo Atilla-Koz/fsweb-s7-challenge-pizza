@@ -39,12 +39,30 @@ export default function AdvMain() {
           </Link>
         </div>
         <section className="headBot">
-          <img src={icon1} alt="Your Icon" />
-          <img src={icon2} alt="Your Icon" />
-          <img src={icon3} alt="Your Icon" />
-          <img src={icon4} alt="Your Icon" />
-          <img src={icon5} alt="Your Icon" />
-          <img src={icon6} alt="Your Icon" />
+          <span>
+            <img src={icon1} alt="Your Icon" />
+            YENI Kore
+          </span>
+          <span>
+            <img src={icon2} alt="Your Icon" />
+            Pizza
+          </span>
+          <span>
+            <img src={icon3} alt="Your Icon" />
+            Burger
+          </span>
+          <span>
+            <img src={icon4} alt="Your Icon" />
+            Kızartmalar
+          </span>
+          <span>
+            <img src={icon5} alt="Your Icon" />
+            Fast Food
+          </span>
+          <span>
+            <img src={icon6} alt="Your Icon" />
+            Gazlı İçecekler
+          </span>
         </section>
       </header>
       <section className="cards">
@@ -68,22 +86,66 @@ export default function AdvMain() {
       </section>
       <section className="cards2">
         <p>deneme</p>
-        <legend>deneme</legend>
+        <h3>deneme</h3>
         <div className="bodyBot">
-          <img src={icon1} alt="Your Icon" />
-          <img src={icon2} alt="Your Icon" />
-          <img src={icon3} alt="Your Icon" />
-          <img src={icon4} alt="Your Icon" />
-          <img src={icon5} alt="Your Icon" />
-          <img src={icon6} alt="Your Icon" />
+          <span>
+            <img src={icon1} alt="Your Icon" />
+            YENI Kore
+          </span>
+          <div className="darkicon">
+            <img className="darkicon" src={icon2} alt="Your Icon" />
+            Pizza
+          </div>
+          <span>
+            <img src={icon3} alt="Your Icon" />
+            Burger
+          </span>
+          <span>
+            <img src={icon4} alt="Your Icon" />
+            Kızartmalar
+          </span>
+          <span>
+            <img src={icon5} alt="Your Icon" />
+            Fast Food
+          </span>
+          <span>
+            <img src={icon6} alt="Your Icon" />
+            Gazlı İçecekler
+          </span>
         </div>
-        <div className="">
-          <img src={p1} alt="" />
-          <img src={p2} alt="" />
-          <img src={p3} alt="" />
+        <div className="products">
+          <span className="productCard">
+            <img src={p1} alt="" />
+            <div className="productDis">
+              <h4>deneme</h4>
+              <p>deneme</p>
+              <p>deneme</p>
+            </div>
+          </span>
+          <span className="productCard">
+            <img src={p2} alt="" />
+            <div className="productDis">
+              <h4>deneme</h4>
+              <p>deneme</p>
+              <p>deneme</p>
+            </div>
+          </span>
+          <span className="productCard">
+            <img src={p3} alt="" />
+            <div className="productDis">
+              <h4>deneme</h4>
+              <p>deneme</p>
+              <p>deneme</p>
+            </div>
+          </span>
         </div>
       </section>
-      <footer></footer>
+      <footer>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </footer>
     </div>
   );
 }

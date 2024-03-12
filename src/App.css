@@ -57,6 +57,7 @@
   background-size: cover;
   background-position: center;
   width: 20%;
+  border-radius: 10px;
 }
 .rightCard {
   background-size: cover;
@@ -68,27 +69,47 @@
   background-size: cover;
   background-position: center;
   margin-bottom: 1rem;
+  border-radius: 10px;
 }
 .rightBot {
   background-image: url('./mile2-aseets/cta/kart-3.png');
   background-size: cover;
   background-position: center;
+  border-radius: 10px;
 }
 /* body 2 */
 .cards2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
 }
 .bodyBot {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  gap: 10%;
+  gap: 2rem;
   background-color: white;
 }
+.darkicon {
+  background-color: #292929;
+  color: white;
+}
 .bodyBot img {
-  border-radius: 20px;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  border-radius: 50px;
+
   background-color: white;
+}
+.products {
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+}
+.productCard {
+}
+.productDis {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
 }
 
 .suc {

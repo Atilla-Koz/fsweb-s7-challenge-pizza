@@ -52,27 +52,27 @@ export default function AdvMain() {
         </div>
         <section className="headBot">
           <span>
-            <img src={icon1} alt="Your Icon" />
+            <img src={icon1} alt="" />
             YENI Kore
           </span>
           <span>
-            <img src={icon2} alt="Your Icon" />
+            <img src={icon2} alt="" />
             Pizza
           </span>
           <span>
-            <img src={icon3} alt="Your Icon" />
+            <img src={icon3} alt="" />
             Burger
           </span>
           <span>
-            <img src={icon4} alt="Your Icon" />
+            <img src={icon4} alt="" />
             Kızartmalar
           </span>
           <span>
-            <img src={icon5} alt="Your Icon" />
+            <img src={icon5} alt="" />
             Fast Food
           </span>
           <span>
-            <img src={icon6} alt="Your Icon" />
+            <img src={icon6} alt="" />
             Gazlı İçecekler
           </span>
         </section>
@@ -101,27 +101,27 @@ export default function AdvMain() {
         <h3>deneme</h3>
         <div className="bodyBot">
           <span>
-            <img src={icon1} alt="Your Icon" />
+            <img src={icon1} alt="" />
             YENI Kore
           </span>
           <div className="darkicon">
-            <img className="darkicon" src={icon2} alt="Your Icon" />
+            <img className="darkicon" src={icon2} alt="" />
             Pizza
           </div>
           <span>
-            <img src={icon3} alt="Your Icon" />
+            <img src={icon3} alt="" />
             Burger
           </span>
           <span>
-            <img src={icon4} alt="Your Icon" />
+            <img src={icon4} alt="" />
             Kızartmalar
           </span>
           <span>
-            <img src={icon5} alt="Your Icon" />
+            <img src={icon5} alt="" />
             Fast Food
           </span>
           <span>
-            <img src={icon6} alt="Your Icon" />
+            <img src={icon6} alt="" />
             Gazlı İçecekler
           </span>
         </div>
@@ -190,10 +190,10 @@ export default function AdvMain() {
             <img src={IPic5} alt="" />
           </span>
         </div>
-        <div className="F4">
-          <p>deneme</p>
-        </div>
       </footer>
+      <div className="F4">
+        <p>deneme</p>
+      </div>
     </div>
   );
 }

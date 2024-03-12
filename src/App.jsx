@@ -16,11 +16,8 @@ function App() {
         <Route path="/success">
           <Success />
         </Route>
-        <Route path="/adv">
-          <AdvMain />
-        </Route>
         <Route path="/">
-          <Main />
+          <AdvMain />
         </Route>
       </Switch>
     </>

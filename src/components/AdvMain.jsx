@@ -51,6 +51,7 @@ export default function AdvMain() {
           <section>
             <img className="logo" src={logo} alt="" />
           </section>
+          <p className="satisfy-regular">kod acıktırır</p>
           <p className="mainP">KOD ACIKTIRIR </p>
           <p className="mainP">PIZZA, DOYURUR</p>
           <Link to="/order">

@@ -11,7 +11,7 @@
 
 .logo {
   margin-top: 3rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   color: white;
   font-size: 3rem;
 }
@@ -27,7 +27,7 @@
   background-color: #eee9e2;
 }
 
-/* ++ADV MAIN CSS */
+/* ++ADV MAIN PAGE CSS */
 /* header */
 .AdvMain {
   background-image: url('../Assets/mile1-assets/home-banner.png');
@@ -36,6 +36,7 @@
   align-items: center;
   background-size: cover;
   background-position: center;
+  padding-bottom: 15rem;
 }
 .headBot {
   display: flex;

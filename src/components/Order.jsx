@@ -129,17 +129,18 @@ export default function Order() {
       totalPrice: totalPrice,
       xTimes: xTimes,
     };
-    return !formValid ? alert('Lütfen formu eksiksiz doldurunuz.') : null;
-    axios
-      .post('https://reqres.in/api/pizza', formDataWithTotalPrice)
-      .then((response) => {
-        console.log('API Response:', response.data);
+    return !formValid
+      ? (disabled = { handleSubmit })
+      : axios
+          .post('https://reqres.in/api/pizza', formDataWithTotalPrice)
+          .then((response) => {
+            console.log('API Response:', response.data);
 
-        history.push('/success', { responseData: response.data });
-      })
-      .catch((error) => {
-        console.error('API Request Error:', error);
-      });
+            history.push('/success', { responseData: response.data });
+          })
+          .catch((error) => {
+            console.error('API Request Error:', error);
+          });
   };
 
   const [xTimes, setXTimes] = useState(1);

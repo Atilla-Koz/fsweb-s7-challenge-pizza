@@ -129,7 +129,7 @@ export default function Order() {
       totalPrice: totalPrice,
       xTimes: xTimes,
     };
-
+    return !formValid ? alert('Lütfen formu eksiksiz doldurunuz.') : null;
     axios
       .post('https://reqres.in/api/pizza', formDataWithTotalPrice)
       .then((response) => {

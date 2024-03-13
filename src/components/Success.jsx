@@ -37,12 +37,8 @@ export default function Success() {
             Sipariş Toplamı
           </CardTitle>
           <CardBody>
-            <CardText>
-              Seçimler: {JSON.stringify(responseData.totalPrice) - 85.5} ₺
-            </CardText>
-            <CardText>
-              Toplam: {JSON.stringify(responseData.totalPrice)}
-            </CardText>
+            <CardText>Seçimler: {responseData.totalPrice - 85.5} ₺</CardText>
+            <CardText>Toplam: {responseData.totalPrice}</CardText>
           </CardBody>
         </Card>
       </footer>

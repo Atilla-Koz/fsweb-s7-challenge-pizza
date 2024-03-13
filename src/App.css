@@ -274,4 +274,8 @@
   .F4 {
     width: 100%;
   }
+  .suc {
+    height: 100vh;
+    font-size: 11px;
+  }
 }

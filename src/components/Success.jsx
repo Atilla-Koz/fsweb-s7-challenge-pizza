@@ -18,9 +18,9 @@ export default function Success() {
       <section className="sucText">
         <hr></hr>
         <legend>Position Absolute Acı Pizza</legend>
-        <p>Boyut:{JSON.stringify(responseData.size)}</p>
-        <p>Hamur:{JSON.stringify(responseData.thickness)}</p>
-        <p>Ek Malzemeler:{JSON.stringify(responseData.material)}</p>
+        <p>Boyut: {responseData.size}</p>
+        <p>Hamur: {responseData.thickness}</p>
+        <p>Ek Malzemeler: {responseData.material.join(', ')}</p>
       </section>
       <footer>
         <Card

@@ -69,6 +69,7 @@ export default function Order() {
   const [formValid, setFormValid] = useState(false);
   const [selectedMaterials, setSelectedMaterials] = useState([]);
   const [totalPrice, setTotalPrice] = useState(85.5);
+  const [xTimes, setXTimes] = useState(1);
 
   useEffect(() => {
     const materialsPrice = selectedMaterials.reduce(
@@ -143,7 +144,6 @@ export default function Order() {
           });
   };
 
-  const [xTimes, setXTimes] = useState(1);
   const handlePricePlsus = (event) => {
     setXTimes(xTimes + 1);
   };

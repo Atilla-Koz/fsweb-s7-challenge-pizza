@@ -277,5 +277,6 @@
   .suc {
     height: 100vh;
     font-size: 11px;
+    padding-left: 1%;
   }
 }

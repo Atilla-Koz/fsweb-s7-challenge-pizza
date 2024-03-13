@@ -90,19 +90,27 @@ export default function AdvMain() {
           <h3>Özel </h3>
           <h3> lezzetus</h3>
           <p>Position:Absolute Acı Burger</p>
-          <Button style={customButtonStyle2}> SİPARİŞ VER</Button>
+          <Link to="/order">
+            <Button to="/order" style={customButtonStyle2}>
+              {' '}
+              SİPARİŞ VER
+            </Button>
+          </Link>
         </div>
         <div className="rightCard">
           <div className="rightTop">
             <p>Hackathlon</p>
             <p>Burger Menü</p>
-
-            <Button style={customButtonStyle2}> SİPARİŞ VER</Button>
+            <Link to="/order">
+              <Button style={customButtonStyle2}> SİPARİŞ VER</Button>
+            </Link>
           </div>{' '}
           <div className="rightBot">
             <p>Çoooook hızlı </p>
             <p>npm gibi kurye</p>
-            <Button style={customButtonStyle2}> SİPARİŞ VER</Button>
+            <Link to="/order">
+              <Button style={customButtonStyle2}> SİPARİŞ VER</Button>
+            </Link>
           </div>
         </div>
       </section>
